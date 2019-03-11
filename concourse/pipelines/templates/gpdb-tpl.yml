@@ -1277,7 +1277,7 @@ jobs:
     file: gpdb_src/concourse/tasks/ic_gpdb.yml
     image: gpdb6-centos7-test
     params:
-      MAKE_TEST_COMMAND: -k PGOPTIONS='-c optimizer=off -c gp_expand_method=move' installcheck-world
+      MAKE_TEST_COMMAND: -k PGOPTIONS='-c optimizer=off' installcheck-world
       TEST_OS: centos
       TEST_BINARY_SWAP: false
       CONFIGURE_FLAGS: {{configure_flags}}
